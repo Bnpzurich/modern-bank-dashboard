@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthLayout } from '@/components/AuthLayout';
@@ -114,7 +113,7 @@ export default function Login() {
                 <div>
                   <p className="text-sm font-medium text-bank-900">Authentification à deux facteurs</p>
                   <p className="text-xs text-gray-600 mt-1">
-                    Veuillez saisir le code à 6 chiffres envoyé au +33 6 ** ** ** 29
+                    Veuillez saisir le code à 6 chiffres envoyé au +2250779468820
                   </p>
                 </div>
               </div>
