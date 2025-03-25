@@ -38,19 +38,19 @@ export function Navbar() {
           
           {!isMobile && (
             <nav className="hidden md:flex items-center space-x-1">
-              <Link to="/dashboard" className="px-3 py-2 text-sm font-medium text-bank-900 hover:bg-bank-50 rounded-md transition-colors">
+              <Link to="/dashboard" className="px-3 py-2 text-sm font-medium text-green-900 hover:bg-green-50 rounded-md transition-colors">
                 Accueil
               </Link>
-              <Link to="/accounts" className="px-3 py-2 text-sm font-medium text-bank-900 hover:bg-bank-50 rounded-md transition-colors">
+              <Link to="/accounts" className="px-3 py-2 text-sm font-medium text-green-900 hover:bg-green-50 rounded-md transition-colors">
                 Comptes
               </Link>
-              <Link to="/transactions" className="px-3 py-2 text-sm font-medium text-bank-900 hover:bg-bank-50 rounded-md transition-colors">
+              <Link to="/transactions" className="px-3 py-2 text-sm font-medium text-green-900 hover:bg-green-50 rounded-md transition-colors">
                 Transactions
               </Link>
-              <Link to="/transfers" className="px-3 py-2 text-sm font-medium text-bank-900 hover:bg-bank-50 rounded-md transition-colors">
+              <Link to="/transfers" className="px-3 py-2 text-sm font-medium text-green-900 hover:bg-green-50 rounded-md transition-colors">
                 Virements
               </Link>
-              <Link to="/support" className="px-3 py-2 text-sm font-medium text-bank-900 hover:bg-bank-50 rounded-md transition-colors">
+              <Link to="/support" className="px-3 py-2 text-sm font-medium text-green-900 hover:bg-green-50 rounded-md transition-colors">
                 Support
               </Link>
             </nav>
@@ -58,13 +58,13 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center space-x-1">
-          <Button variant="ghost" size="icon" className="text-bank-700">
+          <Button variant="ghost" size="icon" className="text-green-700">
             <Search size={20} />
           </Button>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon" className="text-bank-700 relative">
+              <Button variant="ghost" size="icon" className="text-green-700 relative">
                 <Bell size={20} />
                 <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
               </Button>
@@ -89,17 +89,17 @@ export function Navbar() {
             </DropdownMenuContent>
           </DropdownMenu>
           
-          <Button variant="ghost" size="icon" className="text-bank-700">
+          <Button variant="ghost" size="icon" className="text-green-700">
             <HelpCircle size={20} />
           </Button>
           
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="flex items-center gap-2">
-                <div className="w-8 h-8 rounded-full bg-bank-100 flex items-center justify-center">
-                  <User size={16} className="text-bank-700" />
+                <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
+                  <User size={16} className="text-green-700" />
                 </div>
-                {!isMobile && <span className="text-sm font-medium">Pierre Dupont</span>}
+                {!isMobile && <span className="text-sm font-medium">AUBRETTE THERRIEN</span>}
                 {!isMobile && <ChevronDown size={16} />}
               </Button>
             </DropdownMenuTrigger>
@@ -125,35 +125,35 @@ export function Navbar() {
           <nav className="flex flex-col p-4 space-y-2">
             <Link 
               to="/dashboard" 
-              className="px-4 py-3 text-bank-900 hover:bg-bank-50 rounded-md transition-colors"
+              className="px-4 py-3 text-green-900 hover:bg-green-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Accueil
             </Link>
             <Link 
               to="/accounts" 
-              className="px-4 py-3 text-bank-900 hover:bg-bank-50 rounded-md transition-colors"
+              className="px-4 py-3 text-green-900 hover:bg-green-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Comptes
             </Link>
             <Link 
               to="/transactions" 
-              className="px-4 py-3 text-bank-900 hover:bg-bank-50 rounded-md transition-colors"
+              className="px-4 py-3 text-green-900 hover:bg-green-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Transactions
             </Link>
             <Link 
               to="/transfers" 
-              className="px-4 py-3 text-bank-900 hover:bg-bank-50 rounded-md transition-colors"
+              className="px-4 py-3 text-green-900 hover:bg-green-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Virements
             </Link>
             <Link 
               to="/support" 
-              className="px-4 py-3 text-bank-900 hover:bg-bank-50 rounded-md transition-colors"
+              className="px-4 py-3 text-green-900 hover:bg-green-50 rounded-md transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               Support

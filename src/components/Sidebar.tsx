@@ -42,8 +42,8 @@ export function Sidebar({ collapsed = false, onToggle }: { collapsed?: boolean; 
           </Link>
         ) : (
           <div className="flex justify-center w-full">
-            <div className="rounded bg-gradient-to-r from-bank-500 to-bank-700 w-10 h-10 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">B</span>
+            <div className="rounded bg-gradient-to-r from-green-600 to-green-700 w-10 h-10 flex items-center justify-center">
+              <span className="text-white font-bold text-xl">CA</span>
             </div>
           </div>
         )}

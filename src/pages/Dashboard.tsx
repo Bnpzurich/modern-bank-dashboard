@@ -18,7 +18,7 @@ export default function Dashboard() {
   return (
     <DashboardLayout>
       <div className="mb-6">
-        <h1 className="text-3xl font-bold text-bank-900">Bonjour, Pierre</h1>
+        <h1 className="text-3xl font-bold text-green-900">Bonjour, AUBRETTE THERRIEN</h1>
         <p className="text-muted-foreground">Voici un aperçu de vos finances aujourd'hui</p>
       </div>
       
@@ -52,7 +52,7 @@ export default function Dashboard() {
       
       {/* Quick Actions */}
       <div className="mb-8">
-        <h2 className="text-xl font-semibold text-bank-900 mb-4">Actions rapides</h2>
+        <h2 className="text-xl font-semibold text-green-900 mb-4">Actions rapides</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           <QuickAction title="Nouveau virement" icon="transfer" />
           <QuickAction title="Bénéficiaires" icon="beneficiary" />
@@ -68,7 +68,7 @@ export default function Dashboard() {
         {/* Accounts Section */}
         <div className="lg:col-span-2 space-y-6">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold text-bank-900">Mes comptes</h2>
+            <h2 className="text-xl font-semibold text-green-900">Mes comptes</h2>
             <Link to="/accounts">
               <Button variant="outline" size="sm">Voir tous les comptes</Button>
             </Link>
@@ -149,7 +149,7 @@ export default function Dashboard() {
                 <div className="flex justify-between">
                   <div>
                     <p className="text-white/70 text-xs mb-1">Titulaire</p>
-                    <p className="text-sm font-medium">PIERRE DUPONT</p>
+                    <p className="text-sm font-medium">AUBRETTE THERRIEN</p>
                   </div>
                   <div>
                     <p className="text-white/70 text-xs mb-1">Expire</p>

@@ -16,39 +16,39 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 217 60% 23%;
+    --primary: 142 72% 29%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 215 40% 95%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 142 30% 95%;
+    --secondary-foreground: 142 47% 11%;
 
-    --muted: 214 30% 95%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 142 30% 95%;
+    --muted-foreground: 142 16% 47%;
 
-    --accent: 210 80% 60%;
+    --accent: 142 60% 45%;
     --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 90%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 215 85% 40%;
+    --border: 142 32.6% 90%;
+    --input: 142 32.6% 17.5%;
+    --ring: 142 85% 40%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 220 70% 13%;
+    --sidebar-background: 142 70% 23%;
     --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 210 100% 70%;
+    --sidebar-primary: 142 100% 85%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 50% 22%;
+    --sidebar-accent: 142 50% 32%;
     --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 215 28% 27%;
-    --sidebar-ring: 210 100% 70%;
+    --sidebar-border: 142 28% 37%;
+    --sidebar-ring: 142 100% 85%;
   }
 
   * {
-    @apply border-border selection:bg-bank-700/10 selection:text-bank-800;
+    @apply border-border selection:bg-green-700/10 selection:text-green-800;
     scroll-behavior: smooth;
   }
 
@@ -61,7 +61,7 @@
   }
 
   .glass-dark {
-    @apply bg-bank-900/50 backdrop-blur-lg border border-bank-900/20 text-white rounded-lg;
+    @apply bg-green-900/50 backdrop-blur-lg border border-green-900/20 text-white rounded-lg;
   }
 
   .card-hover {
@@ -83,11 +83,11 @@
 
 @layer components {
   .bank-card {
-    @apply bg-gradient-to-br from-bank-700 to-bank-900 text-white rounded-xl shadow-lg overflow-hidden;
+    @apply bg-gradient-to-br from-green-700 to-green-900 text-white rounded-xl shadow-lg overflow-hidden;
   }
   
   .bank-card-light {
-    @apply bg-gradient-to-br from-white to-bank-50 text-bank-900 rounded-xl shadow-lg overflow-hidden border border-bank-100;
+    @apply bg-gradient-to-br from-white to-green-50 text-green-900 rounded-xl shadow-lg overflow-hidden border border-green-100;
   }
   
   .security-badge {
@@ -95,7 +95,7 @@
   }
   
   .transaction-row {
-    @apply flex items-center gap-3 py-3 border-b border-gray-100 last:border-0 hover:bg-bank-50/50 rounded-md transition-colors px-2;
+    @apply flex items-center gap-3 py-3 border-b border-gray-100 last:border-0 hover:bg-green-50/50 rounded-md transition-colors px-2;
   }
   
   .sidebar-link {

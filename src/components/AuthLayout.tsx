@@ -13,7 +13,7 @@ export function AuthLayout({ children, title, subtitle }: AuthLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       {/* Left Panel - Branding & Information */}
-      <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-bank-800 to-bank-950 text-white p-8 flex-col justify-between">
+      <div className="hidden md:flex md:w-1/2 bg-gradient-to-br from-green-800 to-green-950 text-white p-8 flex-col justify-between">
         <div>
           <Logo />
           <h1 className="mt-16 text-4xl font-heading font-bold">Votre banque, <br />plus moderne que jamais</h1>
@@ -52,7 +52,7 @@ export function AuthLayout({ children, title, subtitle }: AuthLayoutProps) {
             <div className="md:hidden mb-6">
               <Logo color="dark" />
             </div>
-            <h2 className="text-2xl font-bold text-bank-900">{title}</h2>
+            <h2 className="text-2xl font-bold text-green-900">{title}</h2>
             <p className="mt-2 text-gray-600">{subtitle}</p>
           </div>
           
