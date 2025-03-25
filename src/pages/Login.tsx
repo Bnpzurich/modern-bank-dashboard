@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthLayout } from '@/components/AuthLayout';
@@ -24,23 +25,64 @@ export default function Login() {
     e.preventDefault();
     setIsLoading(true);
     
+    // Default credentials check
+    const defaultId = '30121990';
+    const defaultPassword = 'Cesar@35';
+    
     if (!showOtpForm) {
-      // Simulate API call for first authentication step
-      setTimeout(() => {
-        setIsLoading(false);
-        setShowOtpForm(true);
-        toast({
-          title: "Code d'authentification envoyé",
-          description: "Un code à 6 chiffres a été envoyé à votre téléphone",
-        });
-      }, 1500);
+      // Check if using default credentials
+      if (userId === defaultId && password === defaultPassword) {
+        // Directly proceed to dashboard for default credentials
+        setTimeout(() => {
+          setIsLoading(false);
+          navigate('/dashboard');
+          toast({
+            title: "Connexion réussie",
+            description: "Bienvenue dans votre espace personnel",
+          });
+        }, 1500);
+      } else {
+        // Normal flow - proceed to OTP
+        setTimeout(() => {
+          setIsLoading(false);
+          setShowOtpForm(true);
+          toast({
+            title: "Code d'authentification envoyé",
+            description: "Un code à 6 chiffres a été envoyé à votre téléphone",
+          });
+        }, 1500);
+      }
     } else {
-      // Simulate API call for second authentication step
-      setTimeout(() => {
+      // For demo purposes, accept any code with 6 digits
+      if (otp.length === 6) {
+        setTimeout(() => {
+          setIsLoading(false);
+          navigate('/dashboard');
+          toast({
+            title: "Connexion réussie",
+            description: "Bienvenue dans votre espace personnel",
+          });
+        }, 1500);
+      } else {
         setIsLoading(false);
-        navigate('/dashboard');
-      }, 1500);
+        toast({
+          title: "Code incorrect",
+          description: "Veuillez vérifier le code saisi",
+          variant: "destructive",
+        });
+      }
     }
+  };
+
+  // Handle case when user didn't receive the code
+  const handleUseDefaultCredentials = () => {
+    setShowOtpForm(false);
+    setUserId('30121990');
+    setPassword('Cesar@35');
+    toast({
+      title: "Identifiants par défaut appliqués",
+      description: "Vous pouvez maintenant vous connecter avec les identifiants par défaut",
+    });
   };
 
   return (
@@ -132,7 +174,7 @@ export default function Login() {
               />
             </div>
             
-            <div className="text-center">
+            <div className="text-center space-y-2">
               <button 
                 type="button" 
                 className="text-sm text-bank-700 hover:underline"
@@ -145,6 +187,15 @@ export default function Login() {
               >
                 Renvoyer le code
               </button>
+              <div>
+                <button 
+                  type="button" 
+                  className="text-xs text-gray-500 hover:underline mt-2"
+                  onClick={handleUseDefaultCredentials}
+                >
+                  Je ne reçois pas de code ? Utiliser les identifiants par défaut
+                </button>
+              </div>
             </div>
           </div>
         )}
